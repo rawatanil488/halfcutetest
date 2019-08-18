@@ -1,0 +1,4 @@
+#Thu Aug 15 15:56:41 GMT+05:30 2019
+base.0=C\:\\repos\\cakezone\\cztestnative\\halfcutetest\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
+path.0=classes.dex
+renamed.0=classes.dex

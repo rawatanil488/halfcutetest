@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Thu Aug 15 15:55:18 GMT+05:30 2019
+1.base=C\:\\repos\\cakezone\\cztestnative\\halfcutetest\\android\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.path=kernel-manifest.json
+0.baseType=DIRECTORY
+2.base=C\:\\repos\\cakezone\\cztestnative\\halfcutetest\\android\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.set=ASSET
+1.baseType=DIRECTORY
+count=3
+1.set=ASSET
+0.path=shell-app-manifest.json
+0.set=ASSET
+0.base=C\:\\repos\\cakezone\\cztestnative\\halfcutetest\\android\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.baseType=DIRECTORY
+1.path=shell-app.bundle

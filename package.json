@@ -1,0 +1,30 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "expo": "^34.0.1",
+    "expokit": "34.0.2",
+    "hypertrack-sdk-react-native": "^4.1.1",
+    "react": "16.8.3",
+    "react-dom": "^16.8.6",
+    "react-native": "0.59.8",
+    "react-native-communications": "^2.2.1",
+    "react-native-maps": "git://github.com/react-native-community/react-native-maps.git#master",
+    "react-native-unimodules": "0.5.2",
+    "react-native-web": "^0.11.4",
+    "vue-native-core": "0.1.1",
+    "vue-native-helper": "0.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "babel-preset-expo": "^6.0.0",
+    "vue-native-scripts": "0.1.1"
+  },
+  "private": true
+}
