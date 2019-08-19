@@ -1,22 +1,23 @@
 <template>
   <view class="container">
+    <view><status-bar background-color="coral" bar-style="light-content" /></view>
     <view class="header">
-      <view class="statusbar"></view>
-      <text class="head-text">HalfCute</text>
+      <text class="head-text"> HalfCute </text>
     </view>
     <scroll-view :style="{ width: '98%' }">
       <view class="card" v-for="order in Orders" :key="order.id">
         <view class="card-head"></view>
-        
-        <touchable-opacity class="card-container" :on-press="selectCake(cake)">
+        <touchable-opacity class="card-container" :on-press="selectCake(order)">
           <view class="card-heading">
             <view>
               <text class="font-bold ID-font">{{order.id}}</text>
               <text>{{order.status}}</text>
+              <text> {{order.count}} </text>
             </view>
             <view>
               <text>{{order.provider_data.name}}</text>
-              <text>{{order.provider_data.contact}}</text>
+              <button :on-press="() => makeCall(order.provider_data.contact)" title="Call" />
+              <!-- <button :on-press="() => increaseCount(order.id)" title="counter" /> -->
             </view>
           </view>
           <view class="product-list" v-for="product in order.products" :key="product.product_id">
@@ -34,24 +35,31 @@
 <script>
 import testData from "./halfcuteTestData";
 import Communications from 'react-native-communications';
+// import {Linking} from 'react-native';
 // import { NativeModules } from 'react-native';
 // var RNHyperTrack = NativeModules.RNHyperTrack;
 
 export default {
-  // props: {
-  //   navigation: {
-  //     type: Object
-  //   }
-  // },
   data: function () {
     return {
       hypertrackKey: false,
-      Orders: []
+      Orders: [],
+      elIndex: 0
     }
   },
   methods: {
     selectCake (cake) {
       // this.navigation.navigate("Details", params = { cake: cake });
+    },
+    increaseCount (id) {
+      this.Orders.forEach(element => {
+        if (element.id === id) {
+          element.count = element.count + 1
+        }
+      });
+    },
+    makeCall (contactNo) {
+      Communications.phonecall(contactNo, true);
     }
   },
   created () {
@@ -70,10 +78,6 @@ export default {
 }
 </script>
 <style>
-.statusbar {
-  height: 20px;
-  background-color: coral;
-}
 .card-heading {
   flex-direction: row;
   align-items: center;
@@ -89,6 +93,7 @@ export default {
   width: 98%;
   border-bottom-width: 1;
   border-color: gray;
+  height: 100;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -113,12 +118,11 @@ export default {
 .head-text {
   font-size: 20;
   color: white;
-  padding-left: 5;
-  padding-right: 5;
-  width: 100%;
 }
 .header {
   background-color: coral;
+  padding-left: 5;
+  padding-right: 5;
   width: 100%;
   height: 60px;
   flex-direction: row;

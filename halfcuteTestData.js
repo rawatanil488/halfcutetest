@@ -1,6 +1,7 @@
 const _halfcuteTestData = [
   {
     id: 425202,
+    count: 0,
     store_id: 9,
     order_id: 751317,
     status: "Delivered",
@@ -111,6 +112,7 @@ const _halfcuteTestData = [
   },
   {
   id: 425379,
+  count: 0,
   store_id: 9,
   order_id: 751500,
   status: "Delivered",
@@ -221,6 +223,7 @@ const _halfcuteTestData = [
   },
   {
   id: 425420,
+  count: 0,
   store_id: 9,
   order_id: 751546,
   status: "Delivered",
@@ -428,6 +431,7 @@ const _halfcuteTestData = [
   },
   {
   id: 425443,
+  count: 0,
   store_id: 9,
   order_id: 751569,
   status: "Delivered",
@@ -609,6 +613,7 @@ const _halfcuteTestData = [
   },
   {
   id: 425487,
+  count: 0,
   store_id: 9,
   order_id: 751618,
   status: "Delivered",
