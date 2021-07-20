@@ -13,7 +13,7 @@
     "hypertrack-sdk-react-native": "^4.1.1",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
-    "react-native": "0.59.8",
+    "react-native": "0.62.3",
     "react-native-communications": "^2.2.1",
     "react-native-maps": "git://github.com/react-native-community/react-native-maps.git#master",
     "react-native-unimodules": "0.5.2",
